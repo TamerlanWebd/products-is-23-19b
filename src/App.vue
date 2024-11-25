@@ -65,20 +65,32 @@ const totalSum = computed(() => {
 <div class="col">
   <h1 class="text-center my-3">Учет товаров</h1>
   <div class="mb-3">
-  <label for="name" class="name">Название</label>
+  <label for="name" class="name":class="{'is-invalid': !name}">Название</label>
   <input type="text" v-model="name" class="form-control" id="name">
+  <div class="invalid-feedback">
+  Заполните название.
+      </div>
 </div>
 <div class="mb-3">
-  <label for="date" class="date">Дата</label>
+  <label for="date" class="date" :class="{'is-invalid': !date}">Дата</label>
   <input type="date" v-model="date" class="form-control" id="date">
+  <div class="invalid-feedback">
+  Заполните дату.
+      </div>
 </div>
 <div class="mb-3">
-  <label for="count" class="count">Количество</label>
+  <label for="count" class="count" :class="{'is-invalid': !count}">Количество</label>
   <input type="number" v-model="count" class="form-control" id="count">
+  <div class="invalid-feedback">
+  Заполните количество.
+      </div>
 </div>
 <div class="mb-3">
-  <label for="price" class="price">Цена</label>
+  <label for="price" class="price" :class="{'is-invalid': !price}">Цена</label>
   <input type="number" v-model="price" class="form-control" id="price">
+  <div class="invalid-feedback">
+  Заполните цену.
+      </div>
 </div>
 <button type="button" class="btn btn-outline-primary" @click="addproduct">Добавить</button>
 </div>
