@@ -5,6 +5,7 @@
 <template>
 <div class="container">
   <div class="row">
+
 <div class="col">
   <h1 class="text-center my-3">Учет товаров</h1>
   <div class="mb-3">
@@ -25,7 +26,25 @@
 </div>
 <button type="button" class="btn btn-outline-primary">Добавить</button>
 </div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">HP</h5>
+        <p class="card-text">500.000  ₸</p>
+        <p class="card-text">X10</p>
+        <p class="card-text">25.11.2024</p>
+      </div>
+      <div class="card-footer text-end">
+        <button class="btn btn-outline-danger">Удалить</button>
+      </div>
+    </div>
   </div>
+  
+    </div>
+
+</div>
+
 </div>
 </template>
 
