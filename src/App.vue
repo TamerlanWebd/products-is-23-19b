@@ -1,5 +1,37 @@
 <script setup>
+import { ref } from "vue";
+const products = ref([
+{
+id: Date.now(),
+name: "Tesla",
+count: 10,
+price: 4000,
+date: "20.11.2024",
+},
+{
+id: Date.now(),
+name: "HP",
+count: 15,
+price: 5000,
+date: "9.10.2024",
+},
+{
+id: Date.now(),
+name: "Acer",
+count: 5,
+price: 10000,
+date: "10.06.2024",
+},
 
+{
+id: Date.now(),
+name: "Asus",
+count: 20,
+price: 8000,
+date: "25.11.2024",
+},
+
+]);
 </script>
 
 <template>
@@ -27,13 +59,13 @@
 <button type="button" class="btn btn-outline-primary">Добавить</button>
 </div>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
+  <div class="col" v-for="products in products">
     <div class="card h-100">
       <div class="card-body">
-        <h5 class="card-title">HP</h5>
-        <p class="card-text">500.000  ₸</p>
-        <p class="card-text">X10</p>
-        <p class="card-text">25.11.2024</p>
+        <h5 class="card-title">{{ products.name }}</h5>
+        <p class="card-text">${{ products.price }}</p>
+        <p class="card-text">x{{ products.count }}</p>
+        <p class="card-text">{{ products.date }}</p>
       </div>
       <div class="card-footer text-end">
         <button class="btn btn-outline-danger">Удалить</button>
